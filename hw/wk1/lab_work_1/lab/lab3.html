@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>ES6 in Action: Enhanced Object Literals</h2>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+	//https://www.sitepoint.com/es6-enhanced-object-literals/
+	//https://www.youtube.com/watch?v=NVp3dkRdahk&list=PLynWqC6VC9KNTc9rkWl7rRV6gYWOhujhB&index=16
+	var obj1 = {
+		name: "Pritesh",
+		city: "Toronto",
+		gender: "Male",
+		display: function()
+		{
+			console.log(this.name + " is from " + this.city);
+		}
+	};
+
+	obj1.display();
+
+	console.log(obj1);
+	console.log(obj1.name);
+	console.log(obj1.city);
+	console.log(obj1.gender);
+</script>
+
+</body>
+</html>
