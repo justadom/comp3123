@@ -1,7 +1,7 @@
 const lowerCaseWords = (mixedArray) => {
     return new Promise((resolve, reject) => {
         if (!Array.isArray(mixedArray)) {
-            return reject("Input must be an array");
+            return reject("not an array");
         }
         const stringsOnly = mixedArray.filter(item => typeof item === "string");
         const lowerCased = stringsOnly.map(word => word.toLowerCase());
