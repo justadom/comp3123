@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "COMP3123 Assignment1 Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\": \"johndoe\", \"email\": \"johndoe@example.com\", \"password\": \"password123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/user/signup"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"johndoe@example.com\", \"password\": \"password123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/user/login"
+        }
+      }
+    }
+  ]
+}
