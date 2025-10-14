@@ -2,7 +2,6 @@ const express = require('express');
 const noteModel = require('../models/NotesModel.js'); // ✅ Correct file name
 const noteRoutes = express.Router();
 
-// 🟢 CREATE a new note
 noteRoutes.post('/notes', async (req, res) => {
     try {
         if (!req.body.content) {
@@ -26,7 +25,6 @@ noteRoutes.post('/notes', async (req, res) => {
     }
 });
 
-// 🟡 RETRIEVE all notes
 noteRoutes.get('/notes', async (req, res) => {
     try {
         const notes = await noteModel.find();
@@ -36,7 +34,6 @@ noteRoutes.get('/notes', async (req, res) => {
     }
 });
 
-// 🔵 RETRIEVE a single note by ID
 noteRoutes.get('/notes/:noteId', async (req, res) => {
     try {
         const note = await noteModel.findById(req.params.noteId);
@@ -49,7 +46,6 @@ noteRoutes.get('/notes/:noteId', async (req, res) => {
     }
 });
 
-// 🟠 UPDATE a note by ID
 noteRoutes.put('/notes/:noteId', async (req, res) => {
     try {
         if (!req.body.content) {
@@ -74,7 +70,6 @@ noteRoutes.put('/notes/:noteId', async (req, res) => {
     }
 });
 
-// 🔴 DELETE a note by ID
 noteRoutes.delete('/notes/:noteId', async (req, res) => {
     try {
         const deletedNote = await noteModel.findByIdAndRemove(req.params.noteId);

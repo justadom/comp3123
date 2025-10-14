@@ -1,8 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const noteRoutes = require('./routes/NoteRoutes.js'); // ✅ Connect routes
+const noteRoutes = require('./routes/NoteRoutes.js'); 
 
-// ✅ Replace with your MongoDB connection string
 const DB_URL = process.env.DB_URL || "mongodb://localhost:27017/comp3095-mongodb";
 const PORT = process.env.PORT || 8080;
 
@@ -14,7 +13,7 @@ app.get('/', (req, res) => {
     res.send("<h1>Welcome to Note taking application - Week06 Exercise</h1>");
 });
 
-app.use('/', noteRoutes); // ✅ Use the Note routes
+app.use('/', noteRoutes); 
 
 mongoose.connect(DB_URL, {
     useNewUrlParser: true,

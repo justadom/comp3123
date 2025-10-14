@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define the Note schema
 const NoteSchema = new mongoose.Schema({
     noteTitle: {
         type: String,
@@ -27,5 +26,4 @@ const NoteSchema = new mongoose.Schema({
     timestamps: true
 });
 
-// Export the Note model
 module.exports = mongoose.model('Note', NoteSchema);
