@@ -1,0 +1,154 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.app-root {
+  min-height: 100vh;
+  position: relative;
+  color: #f6f7fb;
+}
+
+.page-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('./clouds_bg.jpg');
+  background-size: cover;
+  filter: brightness(0.75);
+  z-index: -1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.accent {
+  font-weight: 800;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  min-width: 220px;
+  outline: none;
+}
+
+.search-btn {
+  margin-left: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #4fa3ff;
+  color: #fff;
+}
+
+.main-panel {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+
+.widget {
+  background: linear-gradient(180deg, rgba(29,33,40,0.95), rgba(22,26,30,0.9));
+  border-radius: 18px;
+  padding: 22px;
+  width: 65%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  display: flex;
+  gap: 16px;
+  color: #fff;
+}
+
+.widget-left {
+  flex: 1;
+}
+.date-block .day {
+  font-weight: 600;
+  font-size: 12px;
+  color: #b9c0cc;
+}
+.location {
+  margin-top: 6px;
+  color: #cfd8e3;
+}
+.temp-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+.temp {
+  font-size: 42px;
+  font-weight: 700;
+}
+.desc {
+  text-transform: capitalize;
+  color: #bfc9d6;
+}
+
+.widget-right {
+  width: 210px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.info-row { display:flex; justify-content:space-between; align-items:center; color:#e6edf6; font-size:14px; }
+.info-row span { color:#99a6b9; font-size:12px; }
+
+.sidebar {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.forecast-panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 14px;
+  padding: 16px;
+  color: #dfe8f6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+.forecast-list { display:flex; flex-direction:column; gap:10px; margin-top:8px; }
+.forecast-item { display:flex; align-items:center; justify-content:space-between; gap:10px; background: rgba(255,255,255,0.02); padding:8px; border-radius:8px; }
+.f-icon { width:48px; height:48px; }
+.f-day { font-size:12px; color:#a8b2c4; }
+.f-temp { font-weight:700; }
+
+.summary-grid { display:flex; gap:12px; align-items:center; }
+.summary-item .small-temp { font-size:28px; font-weight:700; }
+.summary-details { font-size:13px; color:#aebbd1; }
+
+.loading, .error { margin-top: 12px; color:#ffdede; }
+
+.footer { margin-top: 28px; color:#c8d1e2; }
