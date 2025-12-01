@@ -1,0 +1,40 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: comp3123_mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: comp3123_assigment1
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  api:
+    build:
+      context: ./backend
+    image: comp3123_api
+    container_name: comp3123_api_container
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      MONGO_URI: mongodb://mongo:27017/comp3123_assigment1
+      JWT_SECRET: super_secret
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ./frontend
+    image: comp3123_frontend
+    container_name: comp3123_frontend_container
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+
+volumes:
+  mongo_data:
